@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+    <style type="text/css">
+        #canvas_1 {
+            border: dotted 3px #000;
+            /*background-color: lightgrey;*/
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var theCanvas = document.getElementById('canvas_1');
+            //theCanvas.width = 150;
+            //theCanvas.height = 150;
+
+            if (theCanvas && theCanvas.getContext) {
+                var ctx = theCanvas.getContext("2d");
+                if (ctx) {
+                    ctx.fillStyle = "lightGray";
+                    ctx.fillRect(0,0, ctx.canvas.width, ctx.canvas.height)
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>First Canvas Example</h1>
+    <canvas id="canvas_1" width="400" height="300">Your does not support canvas.</canvas>
+</body>
+</html>
